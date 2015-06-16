@@ -1,5 +1,5 @@
 
-# Rails 3.2 Integration for Redactor (Devise Edition)
+# Rails 4 Integration for Redactor (Devise Edition)
 
 The redactor-rails gem integrates the [Redactor](http://redactorjs.com/) editor with the Rails 3.2 asset pipeline.
 
@@ -52,9 +52,19 @@ Add to your `application.js`:
 
       //= require redactor-rails
 
-Add to your `application.css`:
+Add to your `application.scss`:
 
-      *= require redactor-rails
+      @import 'redactor-rails';
+
+#### Include the plugins
+
+Add to your `application.js`
+  
+    //= require redactor-rails/plugins
+
+Add to your `application.scss`:
+
+      @import 'redactor-plugins';
 
 ### Initialize Redactor
 

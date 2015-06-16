@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gemspec
 gem "rails", "3.2.3"
 
-
 platforms :ruby do
   gem "sqlite3"
 
