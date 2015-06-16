@@ -3,7 +3,7 @@ class RedactorRails::PicturesController < ApplicationController
 
   def index
     @pictures = RedactorRails.picture_model.where(
-        RedactorRails.picture_model.new.respond_to?(RedactorRails.devise_user) ? { RedactorRails.devise_user_key => redactor_current_user.id } : { })
+      RedactorRails.picture_model.new.respond_to?(RedactorRails.devise_user) ? { RedactorRails.devise_user_key => redactor_current_user.id } : { }).order('created_at DESC').limit(24)
     render :json => @pictures.to_json
   end
 
